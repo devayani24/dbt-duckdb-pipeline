@@ -9,12 +9,11 @@ WITH totals AS (
 ),
 remote AS (
   SELECT
-    DATETRUNC('month',search_date) as month,
+    DATE_TRUNC('month',search_date) as month,
     count(job_id) as remote_postings
   FROM {{ ref('job_postings') }}
   WHERE job_work_from_home = True
   GROUP BY month
-  ORDER BY month
 )
 
 SELECT 
