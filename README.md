@@ -19,6 +19,7 @@ A tested, documented and automated analytics pipeline built with **dbt** on **Du
 | **Materializations** | Project default `table`; the cleaning model overridden to `view` | [`dbt_project.yml`](analytics/dbt_project.yml) |
 | **Environments** | `dev` (local) and `prod` targets, separate DuckDB files | [`ci/profiles.yml`](ci/profiles.yml) |
 | **Automation** | GitHub Actions rebuilds and tests everything on every push and every Monday | [`.github/workflows/dbt_build.yml`](.github/workflows/dbt_build.yml) |
+| **Live docs site** | Build + Test + Publish on evry push | [`Actions workflow`](https://devayani24.github.io/dbt-duckdb-pipeline/) |
 
 ---
 
@@ -84,6 +85,7 @@ SELECT * FROM monthly_summary
 ## 📖 Docs
 Docs are generated with dbt docs generate and published to GitHub Pages:
 
+**→ [devayani24.github.io/dbt-duckdb-pipeline/](https://devayani24.github.io/dbt-duckdb-pipeline/)**
 
 The site shows:
 
